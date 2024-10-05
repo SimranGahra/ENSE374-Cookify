@@ -35,3 +35,27 @@ To create a scalable and user-friendly recipe suggestion platform that promotes 
 - **Hosting**: Heroku/Netlify for deployment
 
 ---
+
+## Project Architecture
+This project follows the Model-View-Controller (MVC) architecture:
+
+- Model: Manages the database for user-specific data (e.g., saved recipes, preferences).
+- View: Provides the user interface where users interact (ingredient input, recipe suggestions).
+- Controller: Manages the interactions between the Model and the View, handling API requests and database queries.
+
+---
+
+## Design Considerations
+This project incorporates several key design considerations:
+
+- Economic Factors: Cost-effective hosting solutions and reliance on free-tier API services to minimize development and maintenance costs.
+- Sustainability: Encourages reducing food waste by suggesting recipes that utilize ingredients users already have.
+- Societal Impact: Promotes healthier eating habits and home cooking, reducing reliance on processed or takeout food.
+- Scalability: The architecture is designed to scale, allowing for future expansions (e.g., integration of additional APIs, new features).
+
+---
+
+## Team Members
+- Simran Gahra
+- Hashir Owais
+- Nathan Okoh
