@@ -27,12 +27,12 @@ To create a scalable and user-friendly recipe suggestion platform that promotes 
 
 ## Technologies Used
 
-- **Frontend**: HTML5, CSS3, JavaScript 
-- **Backend**: Node.js/Express.js
-- **External API**: Spoonacular, Edamam, or similar for recipe data
-- **Database**: MySQL/PostgreSQL for local storage of user-specific data
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap  
+- **Backend**: Node.js, Express.js, EJS, 
+- **External API**: Open AI API for recipe data and generation
+- **Database**: MongoDB for local storage of user-specific data
 - **Version Control**: Git and GitHub for project management
-- **Hosting**: Heroku/Netlify for deployment
+- **User Authntication**: Passport.js
 
 ---
 
