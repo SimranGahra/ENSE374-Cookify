@@ -48,6 +48,7 @@ app.post( "/login", ( req, res ) => {
 app.get("/home", (req, res) =>{
 
     res.sendFile(__dirname + "/views/home.html")
+    console.log(req.body);
 
 
 })
