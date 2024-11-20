@@ -1,9 +1,27 @@
 const express = require ( "express" );
+const mongoose = require("mongoose");
+const session = require("express-session");
+const passport = require("passport");
+const passportLocalMongoose = require("passport-local-mongoose");
+require("dotenv").config();
 
 // this is a canonical alias to make your life easier, like jQuery to $.
 const app = express(); 
 // a common localhost test port
 const port = 3000; 
+
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+mongoose.connect("mongodb://localhost:27017/Cookify", {
+}).then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.error("Error connecting to MongoDB:", error));
+
 
 // body-parser is now built into express!
 
