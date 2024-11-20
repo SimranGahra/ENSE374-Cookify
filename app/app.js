@@ -1,4 +1,7 @@
+
 const express = require ( "express" );
+const recipeController = require("./controller/recipeController");
+
 
 // this is a canonical alias to make your life easier, like jQuery to $.
 const app = express(); 
@@ -48,18 +51,11 @@ app.post( "/login", ( req, res ) => {
 app.get("/home", (req, res) =>{
 
     res.sendFile(__dirname + "/views/home.html")
-    console.log(req.body);
+
 
 
 })
 
 
 
-app.post("/search-result", (req, res) =>{
-
-    console.log(req.body);
-
-    res.sendFile(__dirname + "/views/results.html")
-
-
-})
+app.post("/search-result", recipeController.generateRecipeHandler)
