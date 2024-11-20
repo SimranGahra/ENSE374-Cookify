@@ -5,19 +5,20 @@ app.post("/register", (req, res) => {
         req.body.password,
         (err, user) => {
             if (err) {
-                console.error(err);
-                return res.send("Registration failed");
+                console.log(err);
+                res.redirect("/");
+            } else {
+                passport.authenticate("local")(req, res, () => {
+                    res.redirect("home");
+                });
             }
-            passport.authenticate("local")(req, res, () => {
-                res.send("Successfully registered");
-            });
         }
     );
 });
 
 // Routes for User Login
 app.post("/login", passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "home",
     failureRedirect: "/login"
 }));
 
