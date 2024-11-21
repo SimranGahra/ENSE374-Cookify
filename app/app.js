@@ -1,13 +1,13 @@
 const express = require ( "express" );
 const recipeController = require("./controller/recipeController");
+const userController = require("./controller/userController");
+const User = require("./model/user");
 
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 require("dotenv").config();
 
-const userController = require("./controller/userController");
-const User = require("./model/user");
 
 const app = express();
 const port = 3000;
@@ -27,8 +27,6 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// Routes
-app.use("/", userController);
 
 mongoose.connect("mongodb://localhost:27017/Cookify", {
     useNewUrlParser: true,
@@ -52,24 +50,18 @@ app.get("/home", (req, res) => {
     res.sendFile(__dirname + "/views/home.html");
 });
 
-app.post("/search-result", (req, res) => {
-    res.sendFile(__dirname + "/views/results.html");
-});
+app.get("/home", (req, res) =>{
+    res.sendFile(__dirname + "/views/home.html")
+})
+
+app.post("/search-result", recipeController.generateRecipeHandler)
+
+app.post("/register", userController.register_post);
+app.post("/login", userController.login_post);
+app.get("/logout", userController.logout_get);
+
 
 // Start Server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-
-app.get("/home", (req, res) =>{
-
-    res.sendFile(__dirname + "/views/home.html")
-
-
-
-})
-
-
-
-app.post("/search-result", recipeController.generateRecipeHandler)
-
