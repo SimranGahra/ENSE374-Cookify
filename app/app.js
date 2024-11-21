@@ -52,9 +52,7 @@ app.get("/home", (req, res) => {
     res.sendFile(__dirname + "/views/home.html");
 });
 
-app.post("/search-result", (req, res) => {
-    res.sendFile(__dirname + "/views/results.html");
-});
+
 
 // Start Server
 app.listen(port, () => {
@@ -62,14 +60,8 @@ app.listen(port, () => {
 });
 
 app.get("/home", (req, res) =>{
-
     res.sendFile(__dirname + "/views/home.html")
-
-
-
 })
-
-
 
 app.post("/search-result", recipeController.generateRecipeHandler)
 
