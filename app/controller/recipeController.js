@@ -9,10 +9,15 @@ async function generateRecipeHandler(req, res) {
         let recipe = await recipeService.generateRecipes(ingredients, maxPrepTime, dietaryPreference);
         JSON.stringify(recipe, null, 2);
 
-        console.log("HELLO");
-
+        console.log("ALLL RECIPIES");
         console.log(recipe);
-        res.render("results", { data: "Your Data" });
+        console.log("1IST");
+
+        console.log(recipe[0]);
+
+
+       
+        res.render("results", { data: recipe});
 
        
     } catch (error) {
