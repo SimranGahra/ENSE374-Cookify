@@ -1,4 +1,6 @@
-const express = require("express");
+const express = require ( "express" );
+const recipeController = require("./controller/recipeController");
+
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -58,3 +60,16 @@ app.post("/search-result", (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+app.get("/home", (req, res) =>{
+
+    res.sendFile(__dirname + "/views/home.html")
+
+
+
+})
+
+
+
+app.post("/search-result", recipeController.generateRecipeHandler)
+

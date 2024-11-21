@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipe Search</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,14 +11,14 @@
  
     <header class="p-3 bg-dark text-white">
         <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                 <svg class="bi me-2" width="0" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>
     
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Saved Recipies</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Saved Recipes</a></li>
             </ul>
     
             <div class="text-end">
@@ -27,60 +27,75 @@
             </div>
           </div>
         </div>
-      </header>
+    </header>
+
     <!-- Centered search bar -->
-
-    
-      
-    
     <div class="container d-flex justify-content-center align-items-center text-center" style="height: calc(100vh - 56px);">
-      <div class ="w-100">
-      <h1 class="display-4 mb-4">What's cooking?</h1> <!-- Bootstrap display-4 for large text -->
-      <br>
-      <div class="input-group">
-        <form action="/search-result" method="post" class="d-flex w-100">
-          <input  name="Ingredients" type="text" class="form-control form-control-lg" placeholder="Enter Ingredients" aria-label="Enter Ingredients" aria-describedby="button-addon">
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon">Search</button>
-        
-        </div>
+      <div class="w-100">
+        <h1 class="display-4 mb-4">What's cooking?</h1>
         <br>
-       <!-- Row for two side-by-side dropdowns -->
-         <div class="row">
-          <div class="col-md-6 mb-3">
-              <!-- First Dropdown -->
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Select Category
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li><a class="dropdown-item" href="#">Category 1</a></li>
-                      <li><a class="dropdown-item" href="#">Category 2</a></li>
-                      <li><a class="dropdown-item" href="#">Category 3</a></li>
-                  </ul>
-              </div>
+
+        <!-- Search Form -->
+        <form id="searchForm" action="/search-result" method="post" class="d-flex flex-column align-items-center">
+          <!-- Ingredients Input -->
+          <div class="input-group mb-3 w-100">
+            <input name="Ingredients" type="text" class="form-control form-control-lg" placeholder="Enter ingredients, separated by commas (e.g., beef, rice, broccoli)" aria-label="Enter Ingredients" aria-describedby="button-addon">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon">Search</button>
           </div>
 
-          <div class="col-md-6 mb-3">
-              <!-- Second Dropdown -->
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                      Select Cuisine
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <li><a class="dropdown-item" href="#">Cuisine 1</a></li>
-                      <li><a class="dropdown-item" href="#">Cuisine 2</a></li>
-                      <li><a class="dropdown-item" href="#">Cuisine 3</a></li>
-                  </ul>
+          <!-- Fieldset for Time -->
+          <fieldset class="mb-3">
+            <legend class="h5">Select Time</legend>
+            <div class="d-flex justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="maxPrepTime" id="time15" value="15">
+                <label class="form-check-label" for="time15">15 minutes</label>
               </div>
-          </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="maxPrepTime" id="time30" value="30">
+                <label class="form-check-label" for="time30">30 minutes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="maxPrepTime" id="time45" value="45">
+                <label class="form-check-label" for="time45">45 minutes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="maxPrepTime" id="time60" value="60">
+                <label class="form-check-label" for="time60">60 minutes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="maxPrepTime" id="time120" value="120">
+                <label class="form-check-label" for="time120">120 minutes</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset for Dietary Preference -->
+          <fieldset class="mb-3">
+            <legend class="h5">Select Dietary Preference</legend>
+            <div class="d-flex justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="dietaryPreference" id="veg" value="Vegetarian">
+                <label class="form-check-label" for="veg">Vegetarian</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="dietaryPreference" id="vegan" value="Vegan">
+                <label class="form-check-label" for="vegan">Vegan</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="dietaryPreference" id="glutenFree" value="Gluten-Free">
+                <label class="form-check-label" for="glutenFree">Gluten-Free</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="dietaryPreference" id="noPreference" value="None">
+                <label class="form-check-label" for="noPreference">No Preference</label>
+              </div>
+            </div>
+          </fieldset>
         </form>
-        </div>
-    </div> 
-
-    
-
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
 </body>
 </html>

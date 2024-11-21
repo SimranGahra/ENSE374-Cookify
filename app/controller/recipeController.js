@@ -1,15 +1,20 @@
 const recipeService = require("../services/recipeService.js");
 
 async function generateRecipeHandler(req, res) {
-    const ingredients = req.query.ingredients ? req.query.ingredients.split(",") : ["chicken", "broccoli"];
-    const maxPrepTime = req.query.maxPrepTime || 30;
-    const dietaryPreference = req.query.dietaryPreference || "Keto";
-
     try {
-        const recipe = await recipeService.generateRecipe(ingredients, maxPrepTime, dietaryPreference);
+        console.log("HELLO11");
+        const ingredients = req.body.Ingredients;
+        const maxPrepTime = req.body.maxPrepTime;
+        const dietaryPreference = req.body.dietaryPreference;
+        let recipe = await recipeService.generateRecipes(ingredients, maxPrepTime, dietaryPreference);
+        JSON.stringify(recipe, null, 2);
 
-        res.setHeader("Content-Type", "application/json");
-        res.send(JSON.stringify(recipe, null, 2)); // Pretty-printed JSON
+        console.log("HELLO");
+
+        console.log(recipe);
+        res.render("results", { data: "Your Data" });
+
+       
     } catch (error) {
         console.error("Error generating recipe:", error);
         res.status(500).json({ error: "Failed to generate recipe" });
