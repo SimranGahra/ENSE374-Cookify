@@ -64,4 +64,15 @@ app.get("/logout", userController.logout_get);
 // Start Server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
+<<<<<<< HEAD
 });
+=======
+});
+
+app.get("/home", (req, res) =>{
+    res.sendFile(__dirname + "/views/home.html")
+})
+
+app.post("/search-result", recipeController.generateRecipeHandler)
+
+>>>>>>> 644d63b01bd09b487f215fac0c226dcbad6b0d80
