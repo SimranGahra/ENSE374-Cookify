@@ -1,11 +1,10 @@
 const express = require("express");
 const passport = require("passport");
-const User = require("../model/user"); // Import User schema
-
-const router = express.Router();
+const User = require("../model/user");
+const app = express();
 
 // User Registration Route
-router.post("/register", async (req, res) => {
+app.post("/register", async (req, res) => {
     try {
         const user = await User.register(
             new User({ username: req.body.username }),
@@ -22,13 +21,13 @@ router.post("/register", async (req, res) => {
 });
 
 // User Login Route
-router.post("/login", passport.authenticate("local", {
+app.post("/login", passport.authenticate("local", {
     successRedirect: "/home",
     failureRedirect: "/"
 }));
 
 // User Logout Route
-router.get("/logout", (req, res, next) => {
+app.get("/logout", (req, res, next) => {
     req.logout(err => {
         if (err) {
             return next(err);
@@ -38,4 +37,10 @@ router.get("/logout", (req, res, next) => {
     });
 });
 
-module.exports = router;
+module.exports = app;
+
+
+
+//penis
+
+//peni
