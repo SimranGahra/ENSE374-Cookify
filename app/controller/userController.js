@@ -1,7 +1,7 @@
 const express = require("express");
 const passport = require("passport");
 const User = require("../model/user");
-const app = express();
+
 
 // User Registration Route
 const register_post = async (req, res) => {
