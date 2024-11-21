@@ -4,30 +4,32 @@ const User = require("../model/user");
 const app = express();
 
 // User Registration Route
-app.post("/register", async (req, res) => {
-    try {
-        const user = await User.register(
-            new User({ username: req.body.username }),
-            req.body.password
-        );
-        passport.authenticate("local")(req, res, () => {
-            console.log("User registered and authenticated:", user.username);
-            res.redirect("/home");
-        });
-    } catch (err) {
-        console.error("Error during registration:", err.message);
-        res.status(500).send("Registration failed: " + err.message);
-    }
-});
+const register_post = async (req, res) => {
+    User.register(
+        new User({ username: req.body.username }),
+        req.body.password,
+        (err, user) => {
+            if (err) {
+                console.log(err);
+                res.redirect("/");
+            } else {
+                passport.authenticate("local")(req, res, () => {
+                    res.redirect("home");
+                });
+            }
+        }
+    );
+};
 
-// User Login Route
-app.post("/login", passport.authenticate("local", {
-    successRedirect: "/home",
-    failureRedirect: "/"
-}));
+const login_post = (req, res, next) => {
+    passport.authenticate("local", {
+        successRedirect: "/home",
+        failureRedirect: "/"
+    })(req, res, next);
+};
 
 // User Logout Route
-app.get("/logout", (req, res, next) => {
+const logout_get = (req, res, next) => {
     req.logout(err => {
         if (err) {
             return next(err);
@@ -35,12 +37,10 @@ app.get("/logout", (req, res, next) => {
         console.log("User logged out successfully.");
         res.redirect("/");
     });
-});
+};
 
-module.exports = app;
-
-
-
-//penis
-
-//peni
+module.exports = {
+    register_post,
+    login_post,
+    logout_get
+};
