@@ -29,7 +29,7 @@ const login_post = (req, res, next) => {
 };
 
 // User Logout Route
-const logout_get = (req, res, next) => {
+const logout_post = (req, res, next) => {
     req.logout(err => {
         if (err) {
             return next(err);
@@ -42,5 +42,5 @@ const logout_get = (req, res, next) => {
 module.exports = {
     register_post,
     login_post,
-    logout_get
+    logout_post,
 };

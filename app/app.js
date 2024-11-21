@@ -35,31 +35,33 @@ mongoose.connect("mongodb://localhost:27017/Cookify", {
   .catch((error) => console.error("Error connecting to MongoDB:", error));
 
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 app.use(express.static("public"));
 
 // Default Routes
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.render("../index"); 
 });
+
 
 app.get("/reviews", (req, res) => {
     res.render("reviews");
 });
 
 app.get("/home", (req, res) => {
-    res.sendFile(__dirname + "/views/home.html");
+    if (req.isAuthenticated()) {
+        res.render("home", { user: req.user }); 
+    } else {
+        res.redirect("/"); 
+    }
 });
 
-
-app.get("/home", (req, res) =>{
-    res.sendFile(__dirname + "/views/home.html")
-})
 
 app.post("/search-result", recipeController.generateRecipeHandler)
 
 app.post("/register", userController.register_post);
 app.post("/login", userController.login_post);
-app.get("/logout", userController.logout_get);
+app.post("/logout", userController.logout_post);
 
 
 // Start Server
