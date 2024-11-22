@@ -53,9 +53,7 @@ app.get("/home", (req, res) => {
 
 //recipie Routes
 app.post("/search-result", recipeController.generateRecipeHandler);
-
 app.get('/search-result/recipe-:recipeId',recipeController.recipe_result_get);
-
 app.get("/saved-recipe", recipeController.saved_recipe_get);
 
 //auth routes
