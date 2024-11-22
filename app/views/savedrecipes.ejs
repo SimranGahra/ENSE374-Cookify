@@ -1,19 +1,21 @@
 <%- include("layouts/header") -%>
 <%- include("layouts/navbar") -%>
-    <div class="container">
-    <div class="row justify-content-md-center ms-5">
+
+<div class="container text-center my-5">
+    <div class="row justify-content-center">
         <div class="col">
-            <h2>Saved Recipes</h2>
+            <h1 class="display-4 fw-bold">Saved Recipes</h1>
+            <p class="text-muted">Your collection of favorite recipes, ready to cook!</p>
+            <hr class="w-50 mx-auto">
         </div>
     </div>
 </div>
-<br>
 
 <div class="container">
     <div class="row justify-content-center">
-        <% data.forEach(recipe => { %>
-            <%- include('partials/recipe-card', { recipe: recipe }) %>
-        <% }); %>
+      <% data.forEach(recipe => { %>
+          <%- include('partials/recipe-card', { recipe: recipe }) %>
+      <% }); %>
     </div>
-</div>
+  </div>
 <%- include("layouts/footer") -%>

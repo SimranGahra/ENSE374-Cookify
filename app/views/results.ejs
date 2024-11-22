@@ -1,5 +1,16 @@
 <%- include("layouts/header") -%>
 <%- include("layouts/navbar") -%>
+
+<div class="container text-center my-5">
+  <div class="row justify-content-center">
+      <div class="col">
+          <h1 class="display-4 fw-bold">Your Tailored Recipes</h1>
+          <p class="text-muted">Here are recipes created just for you based on the ingredients you have.</p>
+          <hr class="w-50 mx-auto">
+      </div>
+  </div>
+</div>
+
   <div class="container">
     <div class="row justify-content-center">
       <% data.forEach(recipe => { %>
@@ -8,3 +19,8 @@
     </div>
   </div>
 <%- include("layouts/footer") -%>
+
+
+
+
+     

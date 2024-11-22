@@ -52,9 +52,11 @@ app.get("/home", (req, res) => {
 });
 
 //recipie Routes
-app.post("/search-result", recipeController.generateRecipeHandler);
-app.get('/search-result/recipe-:recipeId',recipeController.recipe_result_get);
+app.post("/generate-recipe", recipeController.generateRecipeHandler);
+app.get("/search-result", recipeController.search_result_get);
+app.get('/search-result/recipe-:recipeId',recipeController.recipe_page_get);
 app.get("/saved-recipe", recipeController.saved_recipe_get);
+app.get("/addto_favorites/:recipeId",recipeController.addto_favorites_get )
 
 //auth routes
 app.post("/register", userController.register_post);
