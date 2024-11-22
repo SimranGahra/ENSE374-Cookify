@@ -43,8 +43,6 @@ app.get("/", (req, res) => {
     res.render("index"); 
 });
 
-
-
 app.get("/home", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("home", { user: { username: req.user.username}}); 
@@ -59,8 +57,6 @@ app.post("/search-result", recipeController.generateRecipeHandler);
 app.get('/search-result/recipe-:recipeId',recipeController.recipe_result_get);
 
 app.get("/saved-recipe", recipeController.saved_recipe_get);
-
-
 
 //auth routes
 app.post("/register", userController.register_post);

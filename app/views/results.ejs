@@ -1,13 +1,10 @@
 <%- include("layouts/header") -%>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <% data.forEach(recipe => { %>
-            <%- include('partials/recipe-card', { recipe: recipe }) %>
-        <% }); %>
-      </div>
+<%- include("layouts/navbar") -%>
+  <div class="container">
+    <div class="row justify-content-center">
+      <% data.forEach(recipe => { %>
+          <%- include('partials/recipe-card', { recipe: recipe }) %>
+      <% }); %>
     </div>
-
-
-
+  </div>
 <%- include("layouts/footer") -%>
