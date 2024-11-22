@@ -1,4 +1,3 @@
-
     // Add event listeners to dropdown items
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function (event) {
