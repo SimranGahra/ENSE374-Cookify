@@ -1,71 +1,63 @@
 <%- include("layouts/header") -%>
 <%- include("layouts/navbar") -%>
 
-    <!-- Centered search bar -->
-    <div class="container d-flex justify-content-center align-items-center text-center" style="height: calc(100vh - 56px);">
-      <div class="w-100">
-        <h1 class="display-4 mb-4">What's cooking?</h1>
-        <br>
+  <!-- Centered search bar -->
+  <div class="container d-flex justify-content-center align-items-center text-center" style="height: calc(100vh - 56px);">
+    <div class="w-100">
+      <h1 class="display-4 mb-4">What's cooking?</h1>
+      <br>
 
-        <!-- Search Form -->
-        <form id="searchForm" action="/search-result" method="post" class="d-flex flex-column align-items-center">
-          <!-- Ingredients Input -->
-          <div class="input-group mb-3 w-100">
-            <input name="Ingredients" type="text" class="form-control form-control-lg" placeholder="Enter ingredients, separated by commas (e.g., beef, rice, broccoli)" aria-label="Enter Ingredients" aria-describedby="button-addon">
-            <button class="btn btn-outline-secondary" type="submit" id="button-addon">Search</button>
-          </div>
+      <!-- Search Form -->
+      <form id="searchForm" action="/search-result" method="post" class="d-flex flex-column align-items-center">
+        <!-- Ingredients Input -->
+        <div class="input-group mb-3 w-100">
+          <input name="Ingredients" type="text" class="form-control form-control-lg" placeholder="Enter ingredients, separated by commas (e.g., beef, rice, broccoli)" aria-label="Enter Ingredients" aria-describedby="button-addon">
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon">Search</button>
+        </div>
 
-          <!-- Fieldset for Time -->
-          <fieldset class="mb-3">
-            <legend class="h5">Select Time</legend>
-            <div class="d-flex justify-content-between">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="maxPrepTime" id="time15" value="15">
-                <label class="form-check-label" for="time15">15 minutes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="maxPrepTime" id="time30" value="30">
-                <label class="form-check-label" for="time30">30 minutes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="maxPrepTime" id="time45" value="45">
-                <label class="form-check-label" for="time45">45 minutes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="maxPrepTime" id="time60" value="60">
-                <label class="form-check-label" for="time60">60 minutes</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="maxPrepTime" id="time120" value="120">
-                <label class="form-check-label" for="time120">120 minutes</label>
-              </div>
-            </div>
-          </fieldset>
+    <!-- Dropdown Section -->
+    <div class="d-flex justify-content-center align-items-center gap-4">
+      <!-- Time Dropdown -->
+      <div class="dropdown">
+        <button id="timeDropdown" class="btn btn-light border rounded px-4 py-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Select Time
+        </button>
+        <ul class="dropdown-menu shadow">
+          <li><button class="dropdown-item" type="button" value="15">15 minutes</button></li>
+          <li><button class="dropdown-item" type="button" value="30">30 minutes</button></li>
+          <li><button class="dropdown-item" type="button" value="45">45 minutes</button></li>
+          <li><button class="dropdown-item" type="button" value="60">60 minutes</button></li>
+          <li><button class="dropdown-item" type="button" value="120">120 minutes</button></li>
+        </ul>
+      </div>
 
-          <!-- Fieldset for Dietary Preference -->
-          <fieldset class="mb-3">
-            <legend class="h5">Select Dietary Preference</legend>
-            <div class="d-flex justify-content-between">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="dietaryPreference" id="veg" value="Vegetarian">
-                <label class="form-check-label" for="veg">Vegetarian</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="dietaryPreference" id="vegan" value="Vegan">
-                <label class="form-check-label" for="vegan">Vegan</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="dietaryPreference" id="glutenFree" value="Gluten-Free">
-                <label class="form-check-label" for="glutenFree">Gluten-Free</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="dietaryPreference" id="noPreference" value="None">
-                <label class="form-check-label" for="noPreference">No Preference</label>
-              </div>
-            </div>
-          </fieldset>
-        </form>
+      <!-- Dietary Preference Dropdown -->
+      <div class="dropdown">
+        <button id="dietaryDropdown" class="btn btn-light border rounded px-4 py-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Select Dietary Preference
+        </button>
+        <ul class="dropdown-menu shadow">
+          <li><button class="dropdown-item" type="button" value="Vegetarian">Vegetarian</button></li>
+          <li><button class="dropdown-item" type="button" value="Vegan">Vegan</button></li>
+          <li><button class="dropdown-item" type="button" value="Gluten-Free">Gluten-Free</button></li>
+          <li><button class="dropdown-item" type="button" value="None">No Preference</button></li>
+        </ul>
       </div>
     </div>
+  </form>
+</div>
+
+<script>
+  // Dropdown logic to update button text dynamically
+  document.querySelectorAll('.dropdown').forEach(dropdown => {
+    dropdown.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', function () {
+        const button = dropdown.querySelector('.dropdown-toggle');
+        button.textContent = this.textContent;
+        button.value = this.getAttribute('value');
+      });
+    });
+  });
+</script>
 
 <%- include("layouts/footer") -%>
