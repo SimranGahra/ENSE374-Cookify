@@ -14,6 +14,7 @@ async function generateRecipes(ingredients, maxPrepTime, dietaryPreference) {
                     Generate 5 recipes in the following JSON format:
                     [
                         {
+                            "id": 0, // A unique integer ID for the recipe, starting at 0
                             "name": "Recipe Name",
                             "description": "Short description of the recipe.",
                             "ingredients": [
@@ -29,7 +30,7 @@ async function generateRecipes(ingredients, maxPrepTime, dietaryPreference) {
                             "meal_type": "Breakfast/Lunch/Dinner/Snack"
                         }
                     ]
-                    Ensure the response is a valid JSON array of exactly 5 recipes without any extra text or explanation.
+                    Ensure the response is a valid JSON array of exactly 5 recipes without any extra text or explanation. Each recipe should have a unique "id" as an integer starting from 0.
                 `
             }
         ],
@@ -45,8 +46,9 @@ async function generateRecipes(ingredients, maxPrepTime, dietaryPreference) {
         const jsonString = content.substring(jsonStart, jsonEnd + 1); // Extract the JSON array
         try {
             const recipes = JSON.parse(jsonString); // Parse the JSON
-            // Ensure prep_time and calories are integers for all recipes
-            recipes.forEach(recipe => {
+            // Ensure prep_time, calories, and id are properly parsed
+            recipes.forEach((recipe, index) => {
+                recipe.id = parseInt(recipe.id || index, 10); // Assign an ID starting at 0 if missing
                 recipe.prep_time = parseInt(recipe.prep_time, 10); // Parse prep_time
                 recipe.calories = parseInt(recipe.calories, 10); // Parse calories
             });

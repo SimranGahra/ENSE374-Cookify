@@ -1,0 +1,74 @@
+<div class="container my-5">
+    <!-- Recipe Header -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <h1 class="display-5"><%= data.name %></h1>
+        <p class="lead"><%= data.description %></p>
+        <!-- Add to Favorites Button -->
+        <button class="btn btn-primary mt-3">Add to Favorites</button>
+      </div>
+      <!-- <div class="col-md-4 text-center">
+        <img src="https://via.placeholder.com/300" alt="<%= data.name %> Image" class="img-fluid rounded">
+      </div> -->
+    </div>
+  
+    <!-- Recipe Details (Prep Time, Calories, Meal Type) -->
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Prep Time</h5>
+            <p class="card-text"><%= data.prep_time %> minutes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Calories</h5>
+            <p class="card-text"><%= data.calories %> cal</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Meal Type</h5>
+            <p class="card-text"><%= data.meal_type %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Ingredients Section -->
+    <div class="row mb-5">
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">Ingredients</h4>
+            <ul class="list-group list-group-flush">
+              <% data.ingredients.forEach(function(ingredient) { %>
+                <li class="list-group-item"><%= ingredient %></li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Method Section -->
+    <div class="row">
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">Method</h4>
+            <ol>
+              <% data.method.forEach(function(step) { %>
+                <li><%= step %></li>
+              <% }); %>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

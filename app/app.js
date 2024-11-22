@@ -40,25 +40,29 @@ app.use(express.static("public"));
 
 // Default Routes
 app.get("/", (req, res) => {
-    res.render("../index"); 
+    res.render("index"); 
 });
 
 
-app.get("/reviews", (req, res) => {
-    res.render("reviews");
-});
 
 app.get("/home", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("home", { user: req.user }); 
-    } else {
-        res.redirect("/"); 
+        res.render("home", { user: { username: req.user.username}}); 
+     } else {
+         res.redirect("/"); 
     }
 });
 
+//recipie Routes
+app.post("/search-result", recipeController.generateRecipeHandler);
 
-app.post("/search-result", recipeController.generateRecipeHandler)
+app.get('/search-result/recipe-:recipeId',recipeController.recipe_result_get);
 
+app.get("/saved-recipe", recipeController.saved_recipe_get);
+
+
+
+//auth routes
 app.post("/register", userController.register_post);
 app.post("/login", userController.login_post);
 app.post("/logout", userController.logout_post);
