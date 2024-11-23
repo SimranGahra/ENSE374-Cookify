@@ -21,7 +21,6 @@ body {
   /* Input Placeholder Styling */
   input::placeholder {
     color: #bbb;
-    font-style: italic;
   }
   
   /* General styles for buttons */
@@ -64,9 +63,41 @@ body {
     color: #343a40; /* Matches the hover for search */
   }
   
-  /* Input Placeholder Styling */
-  input::placeholder {
-    color: #bbb;
-    font-style: italic;
-  }
-  
+/* Accordion Header Default State (Collapsed) */
+.accordion-button {
+    background-color: #e9ecef; /* Light gray for default state */
+    color: black !important; /* Black text when collapsed */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Accordion Header Active State (Expanded) */
+.accordion-button:not(.collapsed) {
+    background-color: #343a40; /* Darker background for active state */
+    color: white !important; /* White text when active */
+}
+
+/* Accordion Header Hover State (Collapsed) */
+.accordion-button:hover {
+    background-color: #d6d8db; /* Slightly darker gray on hover */
+    color: black !important; /* Black text when collapsed and hovered */
+}
+
+/* Accordion Header Hover State (Active) */
+.accordion-button:not(.collapsed):hover {
+    background-color: #2d2f32; /* Slightly darker shade for hover when active */
+    color: white !important; /* White text when active and hovered */
+}
+
+/* Login and Register Buttons */
+.btn.search-btn {
+    background-color: #e9ecef; /* Matches light gray */
+    color: #343a40; /* Dark text */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.search-btn:hover {
+    background-color: #343a40; /* Navbar dark color */
+    color: white; /* White text on hover */
+}
