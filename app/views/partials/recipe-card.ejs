@@ -1,15 +1,17 @@
-<div class="col-md-8 mb-3 d-flex align-items-stretch">
+<div class="col-md-8 mb-4 d-flex align-items-stretch">
     <a href="/search-result/recipe-<%= recipe.generatedId || recipe._id %>" class="text-decoration-none text-reset w-100">
-        <div class="card h-100">
-            <div class="card-body">
-                <h5 class="card-title"><%= recipe.name %></h5>
-                <p class="card-text"><%= recipe.description %></p>
-                <div class="mt-4">
-                    <p><strong>Meal Type:</strong> <%= recipe.meal_type %></p>
-                    <p><strong>Prep Time:</strong> <%= recipe.prep_time %> mins</p>
-                    <p><strong>Calories:</strong> <%= recipe.calories %></p>
-                </div>
-            </div>
+      <div class="card h-100 shadow-lg border-0" style="border-radius: 20px;">
+        <div class="card-body p-4">
+          <h5 class="card-title fw-bold" style="font-family: 'Poppins', sans-serif; color: #343a40;"><%= recipe.name %></h5>
+          <p class="card-text text-muted"><%= recipe.description %></p>
+          <hr>
+          <div class="mt-3">
+            <p><strong>Meal Type:</strong> <%= recipe.meal_type %></p>
+            <p><strong>Prep Time:</strong> <%= recipe.prep_time %> mins</p>
+            <p><strong>Calories:</strong> <%= recipe.calories %></p>
+          </div>
         </div>
+      </div>
     </a>
-</div>
+  </div>
+  
