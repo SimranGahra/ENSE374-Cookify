@@ -3,10 +3,17 @@
     <div class="container text-center">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6 p-3">
-                <div class="accordion border" id="accordionExample">
+                <div class="accordion border shadow-lg" id="accordionExample">
+                    <!-- Login Section -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button 
+                                class="accordion-button login-header collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#collapseOne" 
+                                aria-expanded="true" 
+                                aria-controls="collapseOne">
                                 Log in
                             </button>
                         </h2>
@@ -22,14 +29,21 @@
                                         <label for="loginPassword" class="form-label">Password</label>
                                         <input name="password" type="password" class="form-control" id="loginPassword" placeholder="Password" required>
                                     </div>
-                                    <button type="submit" class="btn btn-secondary btn-outlne border shadow-sm rounded px-4 py-2">Log in</button>
+                                    <button type="submit" class="btn btn-outline-secondary btn-outlne border shadow rounded px-4 py-2">Log in</button>
                                 </form>
                             </div>
                         </div>
                     </div>
+                    <!-- Register Section -->
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button 
+                                class="accordion-button register-header collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#collapseTwo" 
+                                aria-expanded="false" 
+                                aria-controls="collapseTwo">
                                 Register
                             </button>
                         </h2>
@@ -45,7 +59,7 @@
                                         <label for="registerPassword" class="form-label">Password</label>
                                         <input name="password" type="password" class="form-control" id="registerPassword" placeholder="Password" required>
                                     </div>
-                                    <button type="submit" class="btn btn-secondary btn-outlne border shadow-sm rounded px-4 py-2">Sign Up</button>
+                                    <button type="submit" class="btn btn-outline-secondary btn-outlne border shadow rounded px-4 py-2">Sign Up</button>
                                 </form>                                    
                             </div>
                         </div>

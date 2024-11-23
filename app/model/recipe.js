@@ -13,6 +13,5 @@ const recipeSchema = new mongoose.Schema({
     isFavorited: { type: Boolean, required: true }
 });
 
-
 const Recipe = mongoose.model("Recipe", recipeSchema);
 module.exports = Recipe;

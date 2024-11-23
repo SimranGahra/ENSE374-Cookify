@@ -5,3 +5,68 @@
     height: 100vh; /* Full viewport height */
     margin-top: -56px; /* Offset for the height of the header */
 }
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Title Styling */
+  h1 {
+    color: #343a40;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input Placeholder Styling */
+  input::placeholder {
+    color: #bbb;
+    font-style: italic;
+  }
+  
+  /* General styles for buttons */
+.search-btn {
+    background-color: #e9ecef; /* Light gray as default */
+    color: #343a40; /* Dark gray text */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .search-btn:hover {
+    background-color: #343a40; /* Navbar dark color */
+    color: white; /* White text on hover */
+  }
+  
+  /* Dropdown Button Styling */
+  .dropdown-toggle {
+    background-color: #e9ecef; /* Matches search button */
+    color: #343a40; /* Text matches search button */
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-toggle:hover {
+    background-color: #343a40; /* Same as search button hover */
+    color: white; /* White text */
+  }
+  
+  /* Dropdown Items */
+  .dropdown-menu {
+    border: none;
+  }
+  
+  .dropdown-item {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e9ecef; /* Light gray hover effect */
+    color: #343a40; /* Matches the hover for search */
+  }
+  
+  /* Input Placeholder Styling */
+  input::placeholder {
+    color: #bbb;
+    font-style: italic;
+  }
+  

@@ -5,17 +5,20 @@
       <h1 class="display-5"><%= data.name %></h1>
       <p class="lead"><%= data.description %></p>
       <!-- Add to Favorites Button -->
+      <!-- Add to Favorites Button -->
       <% if (!data.isFavorited) { %>
-        <a href="/addto_favorites/<%= data.id %>" class="btn btn-secondary btn-outlne btn-lg border shadow-sm rounded px-4 py-2">Add to Favorites</a>
-    <% } else { %>
+        <a href="/addto_favorites/<%= data.generatedId || data._id %>" class="btn btn-secondary btn-outlne btn-lg border shadow-sm rounded px-4 py-2">
+            Add to Favorites
+        </a>
+      <% } else { %>
         <button class="btn btn-success btn-lg border shadow-sm rounded px-4 py-2" disabled>Already Favorited</button>
-    <% } %>
-    
+      <% } %>
     </div>
     <!-- FOR IMAGE IN FUTRE <div class="col-md-4 text-center">
       <img src="https://via.placeholder.com/300" alt="<%= data.name %> Image" class="img-fluid rounded">
     </div> -->
   </div>
+
 
   <!-- Recipe Details (Prep Time, Calories, Meal Type) -->
   <div class="row mb-5">

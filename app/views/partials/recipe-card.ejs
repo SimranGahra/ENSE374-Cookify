@@ -1,5 +1,5 @@
 <div class="col-md-8 mb-3 d-flex align-items-stretch">
-    <a href="/search-result/recipe-<%= recipe.id %>" class="text-decoration-none text-reset w-100">
+    <a href="/search-result/recipe-<%= recipe.generatedId || recipe._id %>" class="text-decoration-none text-reset w-100">
         <div class="card h-100">
             <div class="card-body">
                 <h5 class="card-title"><%= recipe.name %></h5>
