@@ -101,3 +101,12 @@ body {
     background-color: #343a40; /* Navbar dark color */
     color: white; /* White text on hover */
 }
+  
+  /* Apply a background image to all pages */
+  body {
+    background-image: url('background.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center center !important;
+}

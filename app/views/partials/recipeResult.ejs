@@ -1,35 +1,34 @@
-<div class="container my-5">
-  <!-- Recipe Header -->
-  <div class="row mb-4">
-    <div class="col-md-8">
-      <h1 class="display-4 fw-bold" style="font-family: 'Poppins', sans-serif; color: #343a40; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);">
-        <%= data.name %>
-      </h1>
-      <p class="lead" style="font-size: 1.1rem; font-style: italic; color: #6c757d; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);">
-        <%= data.description %>
-      </p>
-
-      <!-- Add to Favorites Button -->
-      <% if (!data.isFavorited) { %>
-        <a href="/addto_favorites/<%= data.generatedId || data._id %>" 
-          class="btn btn-light px-4 py-2 rounded-pill shadow-lg" 
-          style="background-color: #343a40; color: #ffffff; font-weight: bold; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">
-          Add to Favorites
-        </a>
-      <% } else { %>
-        <button class="btn btn-light px-4 py-2 rounded-pill shadow-lg" 
-          style="background-color: #28a745; color: #ffffff; font-weight: bold; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;" disabled>
-          Already Favorited
-        </button>
-      <% } %>
+<!-- Page Header -->
+<div class="container-fluid bg-light text-dark py-5" style="margin-bottom: -20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+  <div class="container text-start">
+    <div class="row justify-content-center">
+      <div class="col">
+        <h1 class="display-4 fw-bold" style="font-family: 'Poppins', sans-serif; color: #343a40; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);">
+          <%= data.name %>
+        </h1>
+        <p class="text-muted" style="font-size: 1.2rem; font-style: italic; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);">
+          <%= data.description %>
+        </p>
+        <!-- Add to Favorites Button -->
+        <% if (!data.isFavorited) { %>
+          <a href="/addto_favorites/<%= data.generatedId || data._id %>" 
+            class="btn btn-light px-4 py-2 rounded-pill shadow-lg mt-3" 
+            style="background-color: #343a40; color: #ffffff; font-weight: bold; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">
+            Add to Favorites
+          </a>
+        <% } else { %>
+          <button class="btn btn-light px-4 py-2 rounded-pill shadow-lg mt-3" 
+            style="background-color: #28a745; color: #ffffff; font-weight: bold; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;" disabled>
+            Already Favorited
+          </button>
+        <% } %>
+      </div>
     </div>
-    <!-- FOR IMAGE IN FUTURE -->
-    <!-- <div class="col-md-4 text-center">
-      <img src="https://via.placeholder.com/300" alt="<%= data.name %> Image" class="img-fluid rounded">
-    </div> -->
   </div>
+</div>
 
-  <!-- Recipe Details (Prep Time, Calories, Meal Type) -->
+<!-- Recipe Details (Prep Time, Calories, Meal Type) -->
+<div class="container my-5">
   <div class="row mb-5">
     <div class="col-md-4">
       <div class="card shadow-lg border-0" style="border-radius: 15px; background-color: #f8f9fa;">

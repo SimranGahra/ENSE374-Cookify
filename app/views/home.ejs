@@ -2,27 +2,35 @@
 <%- include("layouts/navbar") -%>
 
 <!-- Main Section -->
-<div class="container-fluid bg-light text-dark" style="height: calc(100vh - 56px); background: url('/path/to/cooking-background.jpg') center/cover no-repeat;">
-  <div class="container d-flex justify-content-center align-items-center text-center h-100">
-    <div class="w-100">
-      <!-- Title Section -->
-      <h1 class="display-4 mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 700;">What's Cooking?</h1>
+<div class="container-fluid text-dark vh-100 d-flex align-items-center justify-content-center" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+  <div class="container text-center py-5 rounded-pill" style="background-color: #f8f9fa; border-radius: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+    <!-- Page Header -->
+    <div class="row justify-content-center mb-4">
+      <div class="col">
+        <h1 class="display-4 fw-bold" style="font-family: 'Poppins', sans-serif; color: #343a40; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);">
+          What's Cooking?
+        </h1>
+        <p class="text-muted" style="font-size: 1.2rem; font-style: italic; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);">
+          Discover recipes tailored to your ingredients, prep time, and dietary preferences.
+        </p>
+      </div>
+    </div>
 
-      <!-- Search Form -->
-      <form id="searchForm" action="/generate-recipe" method="post" class="d-flex flex-column align-items-center">
-        <!-- Ingredients Input -->
-        <div class="input-group mb-4 w-75 shadow-lg" style="border-radius: 30px; overflow: hidden; max-width: 1000px;">
-          <input
-            name="Ingredients"
-            type="text"
-            class="form-control form-control-lg"
-            placeholder="Enter ingredients, separated by commas (e.g., beef, rice, broccoli)"
-            aria-label="Enter Ingredients"
-            aria-describedby="button-addon"
-            style="border: none; padding: 15px;"
-          >
-          <button class="btn btn-light px-4 search-btn" type="submit" id="button-addon" style="font-weight: bold;">Search</button>
-        </div>
+    <!-- Search Form -->
+    <form id="searchForm" action="/generate-recipe" method="post" class="d-flex flex-column align-items-center">
+      <!-- Ingredients Input -->
+      <div class="input-group mb-4 w-75 shadow-lg" style="border-radius: 30px; overflow: hidden; max-width: 1000px;">
+        <input
+          name="Ingredients"
+          type="text"
+          class="form-control form-control-lg"
+          placeholder="Enter ingredients, separated by commas (e.g., beef, rice, broccoli)"
+          aria-label="Enter Ingredients"
+          aria-describedby="button-addon"
+          style="border: none; padding: 15px;"
+        >
+        <button class="btn btn-light px-4 search-btn" type="submit" id="button-addon" style="font-weight: bold;">Search</button>
+      </div>
 
         <!-- Dropdown Section -->
         <div class="d-flex justify-content-center align-items-center gap-4 mt-3">
