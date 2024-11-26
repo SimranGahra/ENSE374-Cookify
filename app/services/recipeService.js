@@ -6,35 +6,35 @@ async function generateRecipes(ingredients, maxPrepTime, dietaryPreference) {
         messages: [
             {
                 role: "user",
-                content: `
-    Based on the following inputs:
-    - Ingredients: "${ingredients}"
-    - Maximum Preparation Time: "${maxPrepTime} minutes"
-    - Dietary Preference: "${dietaryPreference}"
-    Generate 5 recipes in the following JSON format:
-    [
-        {
-            "id": 0, // A unique integer ID for the recipe, starting at 0
-            "name": "Recipe Name",
-            "description": "Short description of the recipe.",
-            "ingredients": [
-                "Ingredient 1 with quantity",
-                "Ingredient 2 with quantity"
-            ],
-            "method": [
-                "Begin by rinsing the rice under cold water until the water runs clear. This helps remove excess starch.",
-                "In a medium-sized saucepan, heat 1 tablespoon of olive oil over medium heat. Add the minced garlic and sauté for about 1-2 minutes until it becomes fragrant but not browned.",
-                "Add the rinsed rice to the saucepan and stir to coat the rice with the garlic and oil. Pour in the chicken broth, increase the heat to high, and bring to a boil. Once boiling, reduce the heat to low, cover the pan, and let it simmer for about 18-20 minutes until the rice is cooked and absorbs all the liquid.",
-                "While the rice is cooking, season the chicken breasts with salt and pepper. In a separate skillet, heat the remaining tablespoon of olive oil over medium-high heat. Add the chicken breasts and cook for 6-7 minutes on each side or until they reach an internal temperature of 165°F. Remove from heat and let them rest for a few minutes before slicing.",
-                "Fluff the rice with a fork and serve it on a plate topped with the sliced garlic chicken. Garnish with chopped parsley."
-            ],
-            "prep_time": 30, // Time in minutes as an integer
-            "calories": 300, // Calorie count as an integer
-            "meal_type": "Breakfast/Lunch/Dinner/Snack"
-        }
-    ]
-    Ensure the response is a valid JSON array of exactly 5 recipes without any extra text or explanation. Do not include numbering (e.g., Step 1, Step 2) in the "method" array. Write each step clearly as a sentence.
-`
+                content: `Based on the following inputs:
+- Ingredients: "${ingredients}"
+- Maximum Preparation Time: "${maxPrepTime} minutes"
+- Dietary Preference: "${dietaryPreference}"
+Generate 5 recipes in the following JSON format:
+[
+    {
+        "id": 0, // A unique integer ID for the recipe, starting at 0
+        "name": "Recipe Name",
+        "description": "Short description of the recipe.",
+        "ingredients": [
+            "Ingredient 1 with quantity",
+            "Ingredient 2 with quantity"
+        ],
+        "method": [
+            "Begin by rinsing the rice under cold water until the water runs clear. This helps remove excess starch.",
+            "In a medium-sized saucepan, heat 1 tablespoon of olive oil over medium heat. Add the minced garlic and sauté for about 1-2 minutes until it becomes fragrant but not browned.",
+            "Add the rinsed rice to the saucepan and stir to coat the rice with the garlic and oil. Pour in the chicken broth, increase the heat to high, and bring to a boil. Once boiling, reduce the heat to low, cover the pan, and let it simmer for about 18-20 minutes until the rice is cooked and absorbs all the liquid.",
+            "While the rice is cooking, season the chicken breasts with salt and pepper. In a separate skillet, heat the remaining tablespoon of olive oil over medium-high heat. Add the chicken breasts and cook for 6-7 minutes on each side or until they reach an internal temperature of 165°F. Remove from heat and let them rest for a few minutes before slicing.",
+            "Fluff the rice with a fork and serve it on a plate topped with the sliced garlic chicken. Garnish with chopped parsley."
+        ],
+        "prep_time": 30, // Time in minutes as an integer
+        "calories": 300, // Calorie count as an integer
+        "meal_type": "Breakfast/Lunch/Dinner/Snack"
+    }
+]
+If the dietary preference is "vegan" or "vegetarian," ensure the recipes exclude meat or animal-derived ingredients. If meat is included in the ingredients, replace it with suitable plant-based alternatives (e.g., tofu, tempeh, seitan, jackfruit, mushrooms). If dairy or eggs are included for "vegan," replace them with appropriate vegan substitutes (e.g., almond milk, flaxseed egg). Ensure the response is a valid JSON array of exactly 5 recipes without any extra text or explanation. Do not include numbering (e.g., Step 1, Step 2) in the "method" array. Write each step clearly as a sentence.
+ `
+    
 
                 
             }
