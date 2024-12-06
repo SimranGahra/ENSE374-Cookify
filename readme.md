@@ -195,35 +195,35 @@ While Cookify offers numerous benefits, certain limitations were identified duri
 ## 4.0 Team Work
 
 ### 4.1 Meeting 1
-- [Meeting Agenda#1](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%202/Meeting%20Agenda%231.pdf)
-- [Meeting Minutes#1](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%202/Meeting%20Minutes%231.pdf)
+- [Meeting Agenda#1](docs/Week%202/Meeting%20Agenda%231.pdf)
+- [Meeting Minutes#1](docs/Week%202/Meeting%20Minutes%231.pdf)
 
 ### 4.2 Meeting 2
-- [Meeting Agenda#2](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%203/Meeting%20Agenda%232.pdf)
-- [Meeting Minutes#2](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%203/Meeting%20Minutes%232.pdf)
-- [Project Status Report 1](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%203/Project%20Status%20Report%201.pdf)
+- [Meeting Agenda#2](docs/Week%203/Meeting%20Agenda%232.pdf)
+- [Meeting Minutes#2](docs/Week%203/Meeting%20Minutes%232.pdf)
+- [Project Status Report 1](docs/Week%203/Project%20Status%20Report%201.pdf)
 
 ### 4.3 Meeting 3
-- [Meeting Agenda#3](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%205/Meeting%20Agenda%233.pdf)
-- [Meeting Minutes#3](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%205/Meeting%20Minutes%233.pdf)
-- [Project Status Report 2](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%205/Project%20Status%20Report%202.pdf)
+- [Meeting Agenda#3](docs/Week%205/Meeting%20Agenda%233.pdf)
+- [Meeting Minutes#3](docs/Week%205/Meeting%20Minutes%233.pdf)
+- [Project Status Report 2](docs/Week%205/Project%20Status%20Report%202.pdf)
 
 ### 4.4 Meeting 4
-- [Meeting Agenda#4](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%206/Meeting%20Agenda%234.pdf)
-- [Meeting Minutes#4](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%206/Meeting%20Minutes%234.pdf)
+- [Meeting Agenda#4](docs/Week%206/Meeting%20Agenda%234.pdf)
+- [Meeting Minutes#4](docs/Week%206/Meeting%20Minutes%234.pdf)
 
 ### 4.5 Meeting 5
-- [Meeting Agenda#5](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%208/Meeting%20Agenda%235.pdf)
-- [Meeting Minutes#5](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%208/Meeting%20Minutes%235.pdf)
-- [Project Status Report 3](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%208/Project%20Status%20Report%203.pdf)
+- [Meeting Agenda#5](docs/Week%208/Meeting%20Agenda%235.pdf)
+- [Meeting Minutes#5](docs/Week%208/Meeting%20Minutes%235.pdf)
+- [Project Status Report 3](docs/Week%208/Project%20Status%20Report%203.pdf)
 
 ### 4.6 Meeting 6
-- [Meeting Agenda#6](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%2012/Meeting%20Agenda%236.pdf)
-- [Meeting Minutes#6](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%2012/Meeting%20Minutes%236.pdf)
+- [Meeting Agenda#6](docs/Week%2012/Meeting%20Agenda%236.pdf)
+- [Meeting Minutes#6](docs/Week%2012/Meeting%20Minutes%236.pdf)
 
 ### 4.7 Meeting 7
-- [Meeting Agenda#7](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%2014/Meeting%20Agenda%237.pdf)
-- [Meeting Minutes#7](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Week%2014/Meeting%20Minutes%237.pdf)
+- [Meeting Agenda#7](docs/Week%2014/Meeting%20Agenda%237.pdf)
+- [Meeting Minutes#7](docs/Week%2014/Meeting%20Minutes%237.pdf)
 
 ## 5.0 Project Management
 
