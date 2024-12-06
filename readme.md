@@ -137,7 +137,7 @@ The Cookify application integrates several critical components, each designed to
 - **Hosting Platform:** Deploys the application, allowing access across multiple devices with consistent performance.
 
 ---
-![Figure 1 – Block Diagram](./image.png)
+![Figure 1 – Block Diagram](docs/Images/BlockDiagram.png)
 
 ### **Figure 1 – Block Diagram**
 ---
