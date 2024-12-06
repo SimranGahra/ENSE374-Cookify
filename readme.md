@@ -56,10 +56,10 @@ The upcoming sections will outline the design considerations, technical architec
 ## 2.0 Design Problem
 
 ### 2.1 Problem Definition
-Link to the [Business Case](docs/Business%20Case.pdf).
+Link to the [Business Case](docs/Week%203/Business%20Case.pdf).
 
 ### 2.2 Project Charter
-Link to the [Project Charter](docs/Project%20Charter.pdf).
+Link to the [Project Charter](docs/Week%205/Project%20Charter.pdf).
 
 ---
 
