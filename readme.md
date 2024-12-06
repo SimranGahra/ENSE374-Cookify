@@ -50,7 +50,9 @@
 
 1. **Table 1 – Comparison of Solutions**: Comparison of potential solutions for the Cookify application based on key features and constraints. [See here](#table-1-comparison-of-solutions).
 
-2. **Table 2 – Features Table**: Description of key features implemented in the Cookify application. [See here](#332-features).
+2. **Table 2 – Features and Descriptions Table**: Description of key features implemented in the Cookify application. [See here](#332-features).
+
+2. **Table 3 – Slack Time and Critical Path Analysis Table**: Slack time and critical analysis of the main project tasks. [See here](#).
 
 ---
 
