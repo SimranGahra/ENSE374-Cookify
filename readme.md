@@ -130,8 +130,8 @@ After weighing the pros and cons of each approach, we decided on a hybrid soluti
 | Ingredient Matching       | Low                       | Medium                                  | High                                  |
 | User Personalization      | Minimal                   | Moderate                                | High                                  |
 | Data Scalability          | Low                       | Medium                                  | High                                  |
-| Ease of Implementation    | High                      | Moderate                                | Moderate                              |
-| Real-Time Access          | No                        | Yes                                     | Yes                                   |
+| Ease of Implementation    | High                      | Moderate                                | Low                              |
+| Real-Time Access          | No                       | Yes/No                                     | Yes                                   |
 
 <br>
 
