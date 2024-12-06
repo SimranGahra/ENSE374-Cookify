@@ -56,10 +56,10 @@ The upcoming sections will outline the design considerations, technical architec
 ## 2.0 Design Problem
 
 ### 2.1 Problem Definition
-Link to the [Business Case](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Business%20Case.pdf).
+Link to the [Business Case](docs/Business%20Case.pdf).
 
 ### 2.2 Project Charter
-Link to the [Project Charter](https://github.com/SimranGahra/ENSE374-Cookify/blob/main/docs/Project%20Charter.pdf).
+Link to the [Project Charter](docs/Project%20Charter.pdf).
 
 ---
 
@@ -242,9 +242,10 @@ The project effectively addressed key societal and environmental challenges, pro
 Cookify has laid a solid foundation for future enhancements, successfully demonstrating its potential as a scalable and impactful application for improving meal preparation accessibility.
 
 ---
-### 6.2 Lesson Learned Report
+### 6.2 Lessons Learned Report
 
-- [Link to Lessons Learned Report](#)
+- Link to the [Lessons Learned Report](docs/Lessons%20Learned%Report.pdf).
+
 
 ---
 
