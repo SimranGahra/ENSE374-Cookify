@@ -1,6 +1,6 @@
 ![University of Regina Logo](https://www.uregina.ca/communications-marketing/assets/visual-identity/tagline-urlogo-white-background/ur_logo-w-1-line-tagline_horiz_full-colour_rgb.png)
 
-# Cookify: Software System Mangement
+# Cookify: Software System Mangement Project
 
 **Collaborators:**
 - Hashir Owais - 200483044
