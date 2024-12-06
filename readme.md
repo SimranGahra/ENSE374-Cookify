@@ -244,7 +244,7 @@ Cookify has laid a solid foundation for future enhancements, successfully demons
 ---
 ### 6.2 Lessons Learned Report
 
-- Link to the [Lessons Learned Report](docs/Lessons%20Learned%Report.pdf).
+- Link to the [Lessons Learned Report](docs/Lessons%20Learned%20Report.pdf).
 
 
 ---
