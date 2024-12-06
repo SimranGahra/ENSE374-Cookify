@@ -10,14 +10,14 @@
 ---
 
 ## Table of Contents
-1. [Introduction](#1-introduction)
+1. [Introduction](#10-introduction)
     - [1.1.1 Background and Need](#111-background-and-need)
     - [1.1.2 Project Requirements and Stakeholder Context](#112-project-requirements-and-stakeholder-context)
     - [1.1.3 Overview of the Next Sections](#113-overview-of-the-next-sections)
-2. [Design Problem](#2-design-problem)
+2. [Design Problem](#20-design-problem)
     - [2.1 Problem Definition](#21-problem-definition)
     - [2.2 Project Charter](#22-project-charter)
-3. [Solution](#3-solution)
+3. [Solution](#30-solution)
     - [3.1 Solution 1: Static Webpage with Basic Keyword Matching](#31-solution-1-static-webpage-with-basic-keyword-matching)
     - [3.2 Solution 2: Database and External API Integration](#32-solution-2-database-and-external-api-integration)
     - [3.3 Final Solution: Hybrid Web-Based Application with External API and Local Database](#33-final-solution-hybrid-web-based-application-with-external-api-and-local-database)
@@ -25,7 +25,7 @@
         - [3.3.2 Features](#332-features)
         - [3.3.3 Environmental, Societal, Safety, and Economic Considerations](#333-environmental-societal-safety-and-economic-considerations)
         - [3.3.4 Limitations](#334-limitations)
-4. [Team Work](#4-team-work)
+4. [Team Work](#40-team-work)
     - [4.1 Meeting 1](#41-meeting-1)
     - [4.2 Meeting 2](#42-meeting-2)
     - [4.3 Meeting 3](#43-meeting-3)
@@ -33,26 +33,26 @@
     - [4.5 Meeting 5](#45-meeting-5)
     - [4.6 Meeting 6](#46-meeting-6)
     - [4.7 Meeting 7](#47-meeting-7)
-5. [Project Management](#5-project-management)
-6. [Conclusion and Future Work](#6-conclusion-and-future-work)
-7. [References](#7-references)
-8. [Appendix](#8-appendix)
+5. [Project Management](#50-project-management)
+6. [Conclusion and Future Work](#60-conclusion-and-future-work)
+7. [References](#70-references)
+8. [Appendix](#80-appendix)
+9. [Acknowledgments](#90-acknowledgments)
 
 ---
 
 ## List of Figures
 
-1. **Figure 1 – Block Diagram**: Diagram showing the high-level architecture of the Cookify application. [See here](docs/Images/BlockDiagram.png).
+1. **Figure 1 – Block Diagram**: Diagram showing the high-level architecture of the Cookify application. [See here](#figure-1-block-diagram).
+2. **Figure 2 – Gantt Chart**: Visual representation of the project’s timeline and phases. [See here](#figure-2-gantt-chart).
 
 ---
 
 ## List of Tables
 
 1. **Table 1 – Comparison of Solutions**: Comparison of potential solutions for the Cookify application based on key features and constraints. [See here](#table-1-comparison-of-solutions).
-
-2. **Table 2 – Features and Descriptions Table**: Description of key features implemented in the Cookify application. [See here](#332-features).
-
-2. **Table 3 – Slack Time and Critical Path Analysis Table**: Slack time and critical analysis of the main project tasks. [See here](#).
+2. **Table 2 – Features and Descriptions Table**: Detailed description of key features implemented in the Cookify application. [See here](#table-2-features-and-descriptions-table).
+3. **Table 3 – Slack Time and Critical Path Analysis Table**: Analysis of project tasks, showing slack times and identifying the critical path. [See here](#table-3-slack-time-and-critical-path-analysis-table).
 
 ---
 
@@ -125,7 +125,7 @@ After weighing the pros and cons of each approach, we decided on a hybrid soluti
 - **Enhanced User Experience:** Combining real-time data access with user-specific storage, the hybrid approach ensures a seamless, interactive experience. Users can access fresh recipe options while enjoying a personalized app interface tailored to their preferences and history.
 - **Reliability and Redundancy:** By storing essential user data locally, the app can maintain functionality even if the external API experiences downtime, ensuring that users can still access saved recipes and settings.
 
-### Table 1: Comparison of Solutions
+#### **Table 1: Comparison of Solutions**
 
 | Feature/Constraint       | Solution 1: Static Webpage | Solution 2: Database & API Integration | Final Solution: Hybrid Web-Based App |
 |---------------------------|---------------------------|-----------------------------------------|---------------------------------------|
@@ -135,6 +135,7 @@ After weighing the pros and cons of each approach, we decided on a hybrid soluti
 | Ease of Implementation    | High                      | Moderate                                | Low                              |
 | Real-Time Access          | No                       | Yes/No                                     | Yes                                   |
 
+**Table 1 – Comparison of Solutions:** Comparison of potential solutions for the Cookify application.
 <br>
 
 In Conclusion, the hybrid web-based application with an external API and local database provides the most comprehensive solution. This approach ensures accuracy in recipe suggestions, personalized features, and the flexibility to expand as user needs evolve, making it the best fit for the project goals.
@@ -153,14 +154,19 @@ The Cookify application integrates several critical components, each designed to
 - **Hosting Platform:** Deploys the application, allowing access across multiple devices with consistent performance.
 
 ---
-![Figure 1 – Block Diagram](docs/Images/BlockDiagram.png)
 
-### **Figure 1 – Block Diagram**
+#### **Figure 1: Block Diagram**
+![Block Diagram](docs/Images/BlockDiagram.png)
+**Figure 1 – Block Diagram:** Diagram showing the high-level architecture of the Cookify application.
+
+
 ---
 
 ### 3.3.2 Features
 
 The Cookify application includes the following features, designed to enhance functionality and usability:
+
+#### **Table 2: Features and Descriptions Table**
 
 | **Feature**                | **Description**                                                                          |
 |-----------------------------|------------------------------------------------------------------------------------------|
@@ -169,6 +175,8 @@ The Cookify application includes the following features, designed to enhance fun
 | **Ingredient Matching**    | Matches user input ingredients to a recipe database.                                      |
 | **Secure Accounts**        | Authentication system to ensure user privacy and security.                                |
 | **Scalability**            | Designed for integration with future features like new APIs and more filtering options.    |
+
+**Table 2 – Features and Descriptions Table:** Detailed description of key features implemented in the Cookify application.
 
 ---
 
@@ -247,11 +255,18 @@ While Cookify offers numerous benefits, certain limitations were identified duri
 The project’s milestone-based schedule provides a breakdown of the main tasks, and deadlines. 
 - Link to the [Milestone Based Schedule](docs/Week%2014/Milestone-Based%20Schedule.pdf)
 
-### 5.2 Gantt Chart 
-The Gantt chart visualizes the general timeline of the different phase of our project 
-- Link to our [Gantt Chart](docs/Images/Gantt.jpg)
+### 5.2 Gantt Chart
+
+#### **Figure 2: Gantt Chart**
+![Gantt Chart](docs/Images/Gantt.jpg)
+**Figure 2 – Gantt Chart:** Visual representation of the project’s timeline and phases.
+
+
 
 ### 5.3 Slack Time and Critical Path Analysis 
+
+#### **Table 3: Slack Time and Critical Path Analysis Table**
+
 | Task ID | Task Name               | Start Date        | End Date          | Slack Time | Critical Path |
 |---------|-------------------------|-------------------|-------------------|------------|---------------|
 | T1      | Project Initialization  | September 27, 2024 | October 4, 2024   | 0 days     | Yes           |
@@ -261,11 +276,12 @@ The Gantt chart visualizes the general timeline of the different phase of our pr
 | T5      | Testing and Debugging   | Ongoing            | December 1, 2024  | N/A        | No            |
 | T6      | Final Deployment        | December 1, 2024   | December 2, 2024  | 0 days     | Yes           |
 
+**Table 3 – Slack Time and Critical Path Analysis Table:** Analysis of project tasks, showing slack times and identifying the critical path.
 <br>
+
 - Critical Path: T1 → T2 → T3 → T4 → T6
 
-<br>
-
+<br> 
 The slack time between each task was 0 days because we started each task right after the previous and followed the critical path of the project. We incrementally worked on tasks 1 to 6 to ensure we completely the project on time 
 
 ---
