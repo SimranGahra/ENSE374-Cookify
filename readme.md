@@ -297,4 +297,8 @@ N/A
 
 ## 9.0 Acknowledgments
 
-This project benefited from various tools and resources, including the use of **ChatGPT** by OpenAI. ChatGPT was instrumental in providing guidance, generating content, and refining documentation throughout the project. We acknowledge and appreciate the contributions of this AI-driven tool in enhancing the quality and clarity of our work.
+This project benefited from various tools and resources, including the use of **ChatGPT** by OpenAI. ChatGPT was instrumental in providing guidance, generating content, and refining documentation throughout the project.
+
+We also extend our sincere gratitude to **Professor Yogesh Sharma, P.Eng.**, for his invaluable support, mentorship, and guidance throughout this project. His expertise and encouragement were critical to the successful completion of our work.
+
+Thank you to everyone who contributed to the success of this project.
