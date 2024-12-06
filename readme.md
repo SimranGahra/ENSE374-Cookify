@@ -40,6 +40,20 @@
 
 ---
 
+## List of Figures
+
+1. **Figure 1 – Block Diagram**: Diagram showing the high-level architecture of the Cookify application. [See here](docs/Images/BlockDiagram.png).
+
+---
+
+## List of Tables
+
+1. **Table 1 – Comparison of Solutions**: Comparison of potential solutions for the Cookify application based on key features and constraints. [See here](#table-1-comparison-of-solutions).
+
+2. **Table 2 – Features Table**: Description of key features implemented in the Cookify application. [See here](#332-features).
+
+---
+
 ## 1.0 Introduction
 
 ### 1.1.1 Background and Need
