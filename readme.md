@@ -271,10 +271,16 @@ These recommendations aim to refine Cookify's functionality, expand its user bas
 
 ## 7.0 References
 
-*(Provide references here if needed)*
+N/A
 
 ---
 
 ## 8.0 Appendix
 
-*(Include any additional supporting documentation here)*
+N/A
+
+---
+
+## 9.0 Acknowledgments
+
+This project benefited from various tools and resources, including the use of **ChatGPT** by OpenAI. ChatGPT was instrumental in providing guidance, generating content, and refining documentation throughout the project. We acknowledge and appreciate the contributions of this AI-driven tool in enhancing the quality and clarity of our work.
