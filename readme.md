@@ -260,6 +260,7 @@ The Gantt chart visualizes the general timeline of the different phase of our pr
 | T6      | Final Deployment        | December 1, 2024   | December 2, 2024  | 0 days     | Yes           |
 
 - Critical Path: T1 → T2 → T3 → T4 → T6
+
 The slack time between each task was 0 days because we started each task right after the previous and followed the critical path of the project. We incrementally worked on tasks 1 to 6 to ensure we completely the project on time 
 
 ---
