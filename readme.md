@@ -1,7 +1,6 @@
 ![University of Regina Logo](https://www.uregina.ca/communications-marketing/assets/visual-identity/tagline-urlogo-white-background/ur_logo-w-1-line-tagline_horiz_full-colour_rgb.png)
 
-# ENSE 374 - Software System mangement
-# Cookify
+# Cookify: Software System Mangement
 
 **Collaborators:**
 - Hashir Owais - 200483044
@@ -120,11 +119,9 @@ After weighing the pros and cons of each approach, we decided on a hybrid soluti
 | Ease of Implementation    | High                      | Moderate                                | Moderate                              |
 | Real-Time Access          | No                        | Yes                                     | Yes                                   |
 
----
+<br>
 
-### Conclusion
-
-The hybrid web-based application with an external API and local database provides the most comprehensive solution. This approach ensures accuracy in recipe suggestions, personalized features, and the flexibility to expand as user needs evolve, making it the best fit for the project goals.
+In Conclusion, the hybrid web-based application with an external API and local database provides the most comprehensive solution. This approach ensures accuracy in recipe suggestions, personalized features, and the flexibility to expand as user needs evolve, making it the best fit for the project goals.
 
 ---
 
