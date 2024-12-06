@@ -241,7 +241,26 @@ While Cookify offers numerous benefits, certain limitations were identified duri
 
 ## 5.0 Project Management
 
-Provide the link to the ‘Milestone-based Schedule’ document. Use a Gantt chart to show the progress of the work. Mention all the tasks along with their predecessors. Provide the slack time of each task and identify the critical path.
+### Milestone-Based Schedule 
+The project’s milestone-based schedule provides a breakdown of the main tasks, and deadlines. The complete schedule document is accessible here... 
+- [Milestone Based Schedule](docs/Week%2014/Milestone-Based%20Schedule.pdf)
+
+### Gantt Chart 
+The Gantt chart visualizes the general timeline of the different phase of our project 
+- [Gantt Chart](docs/Images/Gantt.jpg)
+
+### Slack Time and Critical Path Analysis 
+| Task ID | Task Name               | Start Date        | End Date          | Slack Time | Critical Path |
+|---------|-------------------------|-------------------|-------------------|------------|---------------|
+| T1      | Project Initialization  | September 27, 2024 | October 4, 2024   | 0 days     | Yes           |
+| T2      | Design Finalization     | October 5, 2024    | October 18, 2024  | 0 days     | Yes           |
+| T3      | Front-End & Back-End Dev| October 19, 2024   | November 14, 2024 | 0 days     | Yes           |
+| T4      | API Integration         | November 15, 2024  | November 20, 2024 | 0 days     | Yes           |
+| T5      | Testing and Debugging   | Ongoing            | December 1, 2024  | N/A        | No            |
+| T6      | Final Deployment        | December 1, 2024   | December 2, 2024  | 0 days     | Yes           |
+
+- Critical Path: T1 → T2 → T3 → T4 → T6
+The slack time between each task was 0 days because we started each task right after the previous and followed the critical path of the project. We incrementally worked on tasks 1 to 6 to ensure we completely the project on time 
 
 ---
 
